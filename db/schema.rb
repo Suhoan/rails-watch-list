@@ -6,11 +6,11 @@
 # db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
-# migrations use external dependencies or application code..
+# migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_16_115034) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_16_154631) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,6 +37,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_16_115034) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "rating"
+    t.string "list_name"
   end
 
   add_foreign_key "bookmarks", "lists"
